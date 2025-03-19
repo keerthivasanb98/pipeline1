@@ -1,4 +1,0 @@
-Hi DevOps!
-Lets start!
-File created on 19th
-commiting and pushing the file
