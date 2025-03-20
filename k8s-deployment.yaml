@@ -23,6 +23,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: simple-maven-app-service
+  namespace: myapp
 spec:
   selector:
     app: simple-maven-app
