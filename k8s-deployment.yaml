@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: simple-maven-app
+  namespace: myapp
 spec:
   replicas: 2
   selector:
@@ -16,7 +17,7 @@ spec:
         - name: simple-maven-app
           image: keerthivasanb2025/simple-maven-app:latest
           ports:
-            - containerPort: 8080
+            - containerPort: 8081
 ---
 apiVersion: v1
 kind: Service
@@ -28,5 +29,5 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 8080
+      targetPort: 8081
   type: LoadBalancer
