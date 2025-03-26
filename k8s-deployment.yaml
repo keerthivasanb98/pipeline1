@@ -5,7 +5,7 @@ metadata:
   labels:
     app: simple-maven-app
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: simple-maven-app
@@ -18,7 +18,7 @@ spec:
         - name: simple-maven-app
           image: keerthivasanb2025/simple-maven-app:latest
           ports:
-            - containerPort: 8080
+            - containerPort: 7070
 ---
 apiVersion: v1
 kind: Service
@@ -30,5 +30,5 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 8080
-  type: LoadBalancer
+      targetPort: 7070
+  type: NodePort
