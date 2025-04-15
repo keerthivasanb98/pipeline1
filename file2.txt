@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 Hi am trying to complete this build this time.
 Still not succed, am trying this time once again.
+=======
+Hello Git!
+>>>>>>> newbranch
